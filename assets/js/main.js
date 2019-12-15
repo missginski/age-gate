@@ -1,8 +1,8 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
-  var modal = '#modal',
-      submit = '#formsubmit',
-      content = '#content';
+  const modal = $('.modal'),
+      submit = $('.formsubmit'),
+      content = $('.content');
 
 	if(localStorage && localStorage.getItem('age')) {
 		$(content).fadeIn();
@@ -11,8 +11,8 @@ $(document).ready(function() {
 	}
 
 	$(submit).on('click', function() {
-    var month = $('#month').val(),
-    		year = $('#year').val(),
+    var month = $('.month').val(),
+    		year = $('.year').val(),
     		age = 21,
 	   		mydate = new Date(),
 				currdate = new Date();
@@ -21,19 +21,18 @@ $(document).ready(function() {
 	    currdate.setFullYear(currdate.getFullYear() - age);
 
 			if (month === 'notset' || year === 'notset') {
-				$('#success-error').fadeIn();
+				$('.success-error').fadeIn();
 				return false;
 			}
 	    else if ((currdate - mydate) < 0) {
-				$('#message').html('<h2>Sorry, you must be 21 to enter this site</h2>');
+				$('.message').html('<h2>Sorry, you must be 21 to enter this site</h2>');
 	      return false;
 	    }
 			else {
-				$('#success-error').html("<h2>Success! You're old enough!</h2>").fadeIn();
+				$('.success-error').html("<h2>Success! You're old enough!</h2>").fadeIn();
 
 				if (remember) {
 					localStorage.setItem('age','verified');
-	        // createCookie('ageVerified', 1, 3650); // expire in 10 years
 				}
 
 				$(submit).on('click', function() {
@@ -42,6 +41,5 @@ $(document).ready(function() {
 				})
 				return true;
 			}
-
 	});
-});
+// });

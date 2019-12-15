@@ -4,25 +4,32 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<title>Fake Store</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/vendors/bootstrap-grid.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-	<div id="modal" class="modal">
+	<!-- main -->
+	<div class="content">
+		<div class="container">
+			<h1>Age Sensitive Material</h1>
+		</div>
+	</div>
+	<!-- modal -->
+	<div class="modal">
     <div class="overlay"></div>
-    <div class="message" id="message">
+    <div class="message">
       <h2>You must be 21 to enter.
 				Please enter your birthday.
 			</h2>
-			<div class="success-error" id="success-error">
+			<div class="success-error">
 				<p>Please Enter a Valid Date!</p>
 			</div>
-      <form id="agegate" method="post" action="">
+      <form class="agegate" method="post" action="">
         <div class="birthday">
           <!-- <label class="day" for="day">Birthday:</label> -->
-          <select id="month" name="month">
+          <select class="month" name="month">
             <option value="notset">Month</option>
             <option value="1">January</option>
             <option value="2">February</option>
@@ -37,17 +44,8 @@
             <option value="11">November</option>
             <option value="12">December</option>
           </select>
-          <select id="year" name="year">
+          <select class="year" name="year">
             <option value="notset">Year</option>
-						<option value="2019">2019</option>
-						<option value="2018">2018</option>
-						<option value="2017">2017</option>
-						<option value="2016">2016</option>
-						<option value="2015">2015</option>
-						<option value="2014">2014</option>
-            <option value="2013">2013</option>
-            <option value="2012">2012</option>
-            <option value="2011">2011</option>
             <option value="2010">2010</option>
             <option value="2009">2009</option>
             <option value="2008">2008</option>
@@ -119,40 +117,14 @@
             <option value="1942">1942</option>
             <option value="1941">1941</option>
             <option value="1940">1940</option>
-            <option value="1939">1939</option>
-            <option value="1938">1938</option>
-            <option value="1937">1937</option>
-            <option value="1936">1936</option>
-            <option value="1935">1935</option>
-            <option value="1934">1934</option>
-            <option value="1933">1933</option>
-            <option value="1932">1932</option>
-            <option value="1931">1931</option>
-            <option value="1930">1930</option>
-            <option value="1929">1929</option>
-            <option value="1928">1928</option>
-            <option value="1927">1927</option>
-            <option value="1926">1926</option>
-            <option value="1925">1925</option>
-            <option value="1924">1924</option>
-            <option value="1923">1923</option>
-            <option value="1922">1922</option>
-            <option value="1921">1921</option>
-            <option value="1920">1920</option>
-            <option value="1919">1919</option>
-            <option value="1918">1918</option>
-            <option value="1917">1917</option>
-            <option value="1916">1916</option>
-            <option value="1915">1915</option>
-            <option value="1914">1914</option>
-            <option value="1913">1913</option>
           </select>
         </div>
         <div class="remember">
-          <input type="checkbox" id="remember" /><label for="remember">Remember Me</label>
+          <input type="checkbox" class="remember" />
+					<label for="remember">Remember Me</label>
         </div>
         <div class="submit">
-          <a id="formsubmit" class="formsubmit" data-submit="post">Enter site</a>
+          <a class="formsubmit" data-submit="post">Enter site</a>
         </div>
       </form>
     </div>
@@ -160,21 +132,11 @@
 
 
 
-	<div id="content" class="content">
-		<div class="container">
-			<h1>Age Sensitive Material</h1>
-		</div>
-	</div>
-
 
 
 
 	<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="main.js"></script>
-
-
+  src="https://code.jquery.com/jquery-3.4.1.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
