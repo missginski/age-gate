@@ -1,4 +1,3 @@
-// $(document).ready(function() {
 
 // age gate
 const modal = $('.modal'),
@@ -43,4 +42,3 @@ $(submit).on('click', function() {
 			return true;
 		}
 });
-// });
