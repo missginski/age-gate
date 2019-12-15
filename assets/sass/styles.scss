@@ -1,9 +1,15 @@
-* {
-	margin: 0;
-	padding: 0;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 body {
-	font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+body {
+	font-family: 'Josefin Sans', sans-serif;
 }
 .container {
 	width: 960px;
