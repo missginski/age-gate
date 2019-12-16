@@ -1,15 +1,22 @@
-// toggle nav
-let button = $('.toggle-nav');
+/**************
+NAV TOGGLE
+**************/
+const button = $('.toggle-nav');
 
-button.on('click', function() {
+function toggleNav() {
   $('nav').toggleClass('active');
-  $('.toggle-nav').toggleClass('close-nav')
-})
+  $('.toggle-nav').toggleClass('close-nav');
+};
 
-// age gate
+button.on('click', toggleNav);
+
+/**************
+MODAL
+**************/
 const modal = $('.modal'),
       submit = $('.formsubmit'),
-      content = $('.content');
+      content = $('.content'),
+      message = $('.success-error');
 
 if(localStorage && localStorage.getItem('age')) {
 	$(content).fadeIn();
@@ -18,7 +25,7 @@ if(localStorage && localStorage.getItem('age')) {
 }
 
 $(submit).on('click', function() {
-  var month = $('.month').val(),
+  let month = $('.month').val(),
   		year = $('.year').val(),
   		age = 21,
    		mydate = new Date(),
@@ -28,19 +35,19 @@ $(submit).on('click', function() {
     currdate.setFullYear(currdate.getFullYear() - age);
 
 		if (month === 'notset' || year === 'notset') {
-			$('.success-error').fadeIn();
+			$(message).fadeIn();
 			return false;
 		}
     else if ((currdate - mydate) < 0) {
-			$('.message').html('<h2>Sorry, you must be 21 to enter this site</h2>');
+			$(message).html('<p class="error">Sorry, you must be 21 to enter this site</p>');
       return false;
     }
 		else {
-			$('.success-error').html("<h2>Success! You're old enough!</h2>").fadeIn();
+			$(message).html("<p>Success!</p>").fadeIn();
 
-			if (remember) {
-				localStorage.setItem('age','verified');
-			}
+			// if (remember) {
+			// 	localStorage.setItem('age','verified');
+			// }
 
 			$(submit).on('click', function() {
 				$(modal).fadeOut();
