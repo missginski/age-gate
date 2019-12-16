@@ -7,42 +7,101 @@
 
 body {
   box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif; }
+  font-family: 'Josefin Sans', sans-serif;
+  color: #242424; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+
+a {
+  text-decoration: none;
+  color: #242424; }
+
+/**************
+HEADER
+**************/
 .hero-image {
   background: no-repeat center url("../images/hero_1.jpg");
   background-size: cover;
   height: 100vh;
   position: relative; }
+  .hero-image::before {
+    content: "";
+    background-color: #000;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .4; }
+  .hero-image .hero-content {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; }
+    .hero-image .hero-content .hero-title {
+      font-size: 3.5rem; }
+    .hero-image .hero-content .hero-subtitle {
+      font-size: 1.875rem;
+      font-weight: 400;
+      line-height: 1.75; }
 
-.hero-image::before {
-  content: "";
-  background-color: #000;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: .4; }
+/**************
+GRID SECTION
+**************/
+.product-grid .grid-item {
+  padding: 4rem 2rem;
+  border: .5px solid #e8e8e8;
+  transition: .3s; }
+  .product-grid .grid-item:hover {
+    background-color: #f2f5f9; }
+  .product-grid .grid-item .product-info > span {
+    display: block;
+    text-align: center; }
+  .product-grid .grid-item .product-year {
+    padding: .625rem 0;
+    font-size: .875rem;
+    font-weight: 600;
+    color: #a9a9a9;
+    letter-spacing: 4px; }
+  .product-grid .grid-item .product-title {
+    padding: 0 0 .3125rem;
+    color: #242424;
+    font-size: 1.625rem; }
+  .product-grid .grid-item .product-price {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #92cacc; }
 
-.hero-content {
-  color: #fff;
+/**************
+FOOTER
+**************/
+footer {
   text-align: center;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2; }
-  .hero-content .hero-title {
-    font-size: 3.5rem; }
-  .hero-content .hero-subtitle {
-    font-size: 1.875rem;
-    font-weight: 400;
-    line-height: 1.75; }
+  padding: .75rem 0;
+  background-color: #242424; }
+  footer p {
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 400; }
+    footer p a {
+      color: #fff;
+      text-decoration: none; }
 
+/**************
+MODAL
+**************/
 .content {
   display: none;
   text-align: center; }
