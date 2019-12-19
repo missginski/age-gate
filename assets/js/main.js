@@ -39,10 +39,14 @@ let month = $('.month').val(),
     $(message).fadeIn();
     return false;
   } else if ((currdate - mydate) < 0) {
-    $(message).html('<p class="error">Sorry, you must be 21 to enter this site</p>');
+    $(message)
+      .html('<p class="error">Sorry, you must be 21 to enter this site</p>')
+      .fadeIn();
     return false;
   } else {
-    $(message).html("<p>Success!</p>").fadeIn();
+    $(message)
+      .html("<p>Success!</p>")
+      .fadeIn();
 
     // if (remember) {
     // 	localStorage.setItem('age','verified');
@@ -50,7 +54,7 @@ let month = $('.month').val(),
 
     $(submit).on('click', function() {
       $(modal).fadeOut();
-      $(content).fadeIn();
+      $(content).toggleClass('fixed');
     })
     return true;
   }
