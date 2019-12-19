@@ -11,52 +11,48 @@
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
-
-
-
-<!-- header -->
-<header>
-  <div class="container-fluid">
-    <div class="branding">
-      <h1><a href="#">Logo</a></h1>
-    </div>
-
-    <nav>
-      <ul class="menu active">
-        <li class="menu-item">
-          <a href="#">Tour</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Customers</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Company</a>
-        </li>
-        <!-- <li class="menu-item">
-          <a href="#">Products</a>
-        </li>
-				<li class="menu-item">
-          <a href="#">Careers</a>
-        </li> -->
-      </ul>
-			<!-- <a class="call-to-action button" href="/contact-us/">Request a Demo</a> -->
-    </nav>
-
-    <div class="toggle-nav">
-      <div class="line"></div>
-      <!-- <span></span> -->
-    </div>
-  </div>
-</header>
-
-
-	<div class="hero-image">
-		<div class="hero-content">
-			<h1 class="hero-title">Welcome to my Fake Store</h1>
-			<h2 class="hero-subtitle">Thanks for stopping by!</h2>
+	<!-- header -->
+	<header>
+	  <div class="container-fluid">
+			<div class="header-wrapper">
+				<div class="toggle-wrapper">
+					<a class="toggle-nav">
+						<div class="line"></div>
+					</a>
+				</div>
+		    <div class="logo-wrap">
+		      <a href="#" class="logo-text">Logo</a>
+		    </div>
+				<a class="cart">
+					<i class="fas fa-shopping-bag"></i>
+				</a>
+			</div>
+			<nav>
+	      <ul class="menu">
+	        <li class="menu-item">
+	          <a href="#" class="menu-link">About Us</a>
+	        </li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">Categories</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">Testimonials</a>
+					</li>
+					<li class="menu-item">
+	          <a href="#" class="menu-link">Contact</a>
+	        </li>
+	      </ul>
+	    </nav>
+	  </div><!-- ends container -->
+	</header>
+	<section class="hero">
+		<div class="hero-image">
+			<div class="hero-content">
+				<h1 class="hero-title">Welcome to my Fake Store</h1>
+				<h2 class="hero-subtitle">Thanks for stopping by!</h2>
+			</div>
 		</div>
-	</div>
+	</section>
 
 	<!-- main -->
 	<section class="main">
@@ -111,7 +107,6 @@
 					</div>
 				</div>
 			</div><!-- ends row -->
-
 			<div class="row no-gutters product-grid">
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="grid-item">
@@ -162,7 +157,6 @@
 					</div>
 				</div>
 			</div><!-- ends row -->
-
 			<div class="row no-gutters product-grid">
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="grid-item">
@@ -228,13 +222,12 @@
 	  </p>
 	</footer>
 
-
 	<!-- modal -->
 	<div class="modal">
     <div class="overlay"></div>
     <div class="message">
-      <h2>You must be 21 to enter. <br>
-				Please enter your birthday.
+      <h2>You must be 21 to enter <br>
+				Please enter your birthday
 			</h2>
 			<div class="success-error">
 				<p class="error">Please Enter a Valid Date!</p>

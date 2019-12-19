@@ -2,13 +2,11 @@
 NAV TOGGLE
 **************/
 const button = $('.toggle-nav'),
-      nav = $('nav');
+      menu = $('.menu');
 
 function toggleNav() {
-  // $('nav').toggleClass('active');
-  // $('.toggle-nav').toggleClass('close-nav');
-  nav.toggleClass('active');
   button.toggleClass('close-nav');
+  menu.toggleClass('active');
 };
 
 button.on('click', toggleNav);
@@ -20,7 +18,6 @@ const modal = $('.modal'),
       submit = $('.formsubmit'),
       content = $('.content'),
       message = $('.success-error');
-
 
 if(localStorage && localStorage.getItem('age')) {
 	$(content).fadeIn();

@@ -3,156 +3,167 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
+
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
   color: #242424;
-}
 
-.container-fluid.no-padding {
-  padding-left: 0;
-  padding-right: 0;
-}
+  .container-fluid.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
+  a {
+    text-decoration: none;
+    color: #242424;
+  }
 
-a {
-  text-decoration: none;
-  color: #242424;
-}
+  li {
+    list-style: none;
+  }
 
-li {
-  list-style: none;
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /**************
 NAV
 **************/
-header {
-  height: 75px;
+.header-wrapper {
+  background: #242424;
+  height: 60px;
+  width: 100%;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background: #242424;
   z-index: 10;
-}
 
-h1 a,
-li a{
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.625rem;
+  }
+
+  .toggle-nav {
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+
+    .line,
+    .line::before,
+    .line::after {
+      content: '';
+      background: #fff;
+      height: 3px;
+      width: 25px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+
+    .line::before {
+      width: 35px;
+      top: calc(50% - 10px);
+      left: calc(50% + 5px);
+      -webkit-transition: .3s ease;
+      transition: .3s ease;
+    }
+
+    .line::after {
+      width: 35px;
+      top: calc(50% + 10px);
+      left: calc(50% + 5px);
+      -webkit-transition: .3s ease;
+      transition: .3s ease;
+    }
+
+    &.close-nav .line {
+      background: transparent;
+      -webkit-transition: .3s;
+      transition: .3s;
+    }
+
+    &.close-nav .line::before {
+      top: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
+              transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
+    }
+
+    &.close-nav .line::after {
+      top: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
+              transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
+    }
+  }
 }
 
 .menu {
-  display: flex;
-}
-
-.menu li {
-  margin-right: 35px;
-}
-
-.menu li:last-child {
-  margin-right: 0;
-}
-
-.menu a:hover {
-  color: #718daa;
-}
-
-nav {
-  display: flex;
-  text-transform: uppercase;
-}
-
-header > .container-fluid .toggle-nav {
-   display: none;
-}
-
-
-@media (max-width: 1079.99px) {
-  header > .container-fluid .toggle-nav {
-    display: block;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    position: absolute;
-    top: 12px;
-    right: 20px;
-  }
-
-  .menu li {
-    height: 75px;
-    margin: 0;
-  }
-
-  nav {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh -75px);
-    background: #fff;
-    top: 75px;
-    right: -100%;
-    transition: .5s;
-  }
-
-  .menu {
-    flex-direction: column;
-    padding-left: 25px;
-  }
-}
-
-.active {
-  right: -150px;
-  opacity: 1;
-}
-
-.line,
-.line::before,
-.line::after {
-  content: '';
+  background: #fff;
+  height: 450px;
+  width: 355px;
+  text-align: center;
+  padding: 8.75rem 2rem;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 35px;
-  background: white;
-  height: 3px;
-}
+  top: 0;
+  left: -355px;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  z-index: 3;
 
-.line::before {
-  top: calc(50% - 10px);
-  transition: .5s ease;
-}
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
-.line::after {
-  top: calc(50% + 10px);
-  transition: .5s ease;
-}
+  .menu-item {
+    color: #242424;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 2rem 0 0;
 
-.toggle-nav.close-nav .line {
-  background: transparent;
-  transition: .5s;
-}
+    &:first-child {
+      padding: 0;
+    }
 
-.toggle-nav.close-nav .line::before {
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
-}
+    .menu-link {
+      -webkit-transition: .3s ease;
+      transition: .3s ease;
 
-.toggle-nav.close-nav .line::after {
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
+      &:hover {
+        color: #d095b7;
+      }
+    }
+  }
+
+  &.active {
+    left: 0;
+    opacity: 1;
+  }
 }
 
 
@@ -183,7 +194,8 @@ HEADER
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 2;
     .hero-title {
       font-size: 3.5rem;
@@ -197,17 +209,6 @@ HEADER
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /**************
 GRID SECTION
 **************/
@@ -215,10 +216,11 @@ GRID SECTION
   .grid-item {
     padding: 4rem 2rem;
     border: .5px solid #e8e8e8;
+    -webkit-transition: .3s;
     transition: .3s;
-      &:hover {
-        background-color: #f2f5f9;
-      }
+    &:hover {
+      background-color: #f2f5f9;
+    }
     .product-info > span {
       display: block;
       text-align: center;
@@ -242,7 +244,6 @@ GRID SECTION
     }
   }
 }
-
 
 /**************
 MODAL
@@ -292,6 +293,10 @@ MODAL
   	        justify-content: space-between;
     z-index: 101;
 
+    @media (max-width: 437px) {
+      width: 100%;
+    }
+
     h2 {
       line-height: 1.25;
       font-weight: 400;
@@ -338,13 +343,6 @@ MODAL
     }
   }
 }
-
-
-
-
-
-
-
 
 /**************
 FOOTER
