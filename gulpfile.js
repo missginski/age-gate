@@ -13,7 +13,7 @@ const paths = {
 	}
 };
 
-// css task
+// compile scss
 gulp.task('styles', function() {
 	return gulp.src(paths.sass.src)
 		.pipe(sourcemaps.init())

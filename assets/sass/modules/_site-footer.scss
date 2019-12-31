@@ -1,0 +1,14 @@
+footer {
+  text-align: center;
+  padding: .75rem 0;
+  background-color: $dark-grey;
+  p {
+    color: $white;
+    font-size: .875rem;
+    font-weight: 400;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

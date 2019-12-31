@@ -1,8 +1,8 @@
 /**************
 NAV TOGGLE
 **************/
-const button = $('.toggle-nav'),
-      menu = $('.menu');
+const button = $('.toggle-nav');
+const menu = $('.menu');
 
 function toggleNav() {
   button.toggleClass('close-nav');
@@ -14,10 +14,10 @@ button.on('click', toggleNav);
 /**************
 MODAL
 **************/
-const modal = $('.modal'),
-      submit = $('.formsubmit'),
-      content = $('.content'),
-      message = $('.success-error');
+const modal = $('.modal');
+const submit = $('.formsubmit');
+const content = $('.content');
+const message = $('.success-error');
 
 if(localStorage && localStorage.getItem('age')) {
 	$(content).fadeIn();
@@ -26,11 +26,11 @@ if(localStorage && localStorage.getItem('age')) {
 };
 
 function getAge() {
-let month = $('.month').val(),
-    year = $('.year').val(),
-    age = 21,
-    mydate = new Date(),
-    currdate = new Date();
+let month = $('.month').val();
+let year = $('.year').val();
+let age = 21;
+let mydate = new Date();
+let currdate = new Date();
 
   mydate = mydate.setFullYear(year, month - 1);
   currdate = currdate.setFullYear(currdate.getFullYear() - age);
