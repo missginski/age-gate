@@ -11,9 +11,11 @@
 	<link rel="stylesheet" href="assets/vendors/bootstrap-grid.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body onload="myFunction()" style="margin:0;">
 
-<main class="content fixed">
+<div id="loader"></div>
+
+<div class="content fixed animate-bottom" style="display:none;" id="myDiv">
 	<!-- header -->
 	<header>
 	  <div class="container-fluid">
@@ -224,7 +226,7 @@
 			<a href="https://missginski.github.io/" target="_blank">Kristyn</a>
 	  </p>
 	</footer>
-</main>
+
 
 	<!-- modal -->
 	<div class="modal">
@@ -329,7 +331,7 @@
       </form>
     </div>
 	</div>	<!-- ends modal -->
-
+</div>
 
 
 
