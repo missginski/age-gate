@@ -1,11 +1,10 @@
-"use strict";
+'use strict';
 
-const gulp = require("gulp");
+const gulp = require('gulp');
 const	sass = require('gulp-sass');
 const	sourcemaps = require('gulp-sourcemaps');
-const	autoprefixer = require("gulp-autoprefixer");
+const	autoprefixer = require('gulp-autoprefixer');
 
-const scssPath = './assets/sass/styles.scss';
 const paths = {
 	sass: {
 		src: './assets/sass/**/*.scss',
@@ -17,8 +16,9 @@ const paths = {
 gulp.task('styles', function() {
 	return gulp.src(paths.sass.src)
 		.pipe(sourcemaps.init())
-		.pipe(sass(autoprefixer()))
+		.pipe(sass())
 		.on('error', sass.logError)
+    .pipe(autoprefixer('last 2 versions'))
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(paths.sass.dest))
 });
