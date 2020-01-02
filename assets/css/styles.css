@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: inherit;
-  box-sizing: inherit; }
+          box-sizing: inherit; }
 
 body {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
   color: #242424; }
   body .container-fluid.no-padding {
@@ -34,11 +34,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -68,7 +68,7 @@ body {
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
+              transform: translate(-50%, -50%); }
     .header-wrapper .toggle-nav .line::before {
       width: 35px;
       top: calc(50% - 10px);
@@ -88,11 +88,11 @@ body {
     .header-wrapper .toggle-nav.close-nav .line::before {
       top: 50%;
       -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
-      transform: translateX(-50%) translateY(-50%) rotateZ(-45deg); }
+              transform: translateX(-50%) translateY(-50%) rotateZ(-45deg); }
     .header-wrapper .toggle-nav.close-nav .line::after {
       top: 50%;
       -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
-      transform: translateX(-50%) translateY(-50%) rotateZ(45deg); }
+              transform: translateX(-50%) translateY(-50%) rotateZ(45deg); }
 
 .menu {
   background: #fff;
@@ -107,7 +107,7 @@ body {
   -webkit-transition: .3s ease;
   transition: .3s ease;
   z-index: 3; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .menu {
       width: 100%; } }
   .menu .menu-item {
@@ -149,9 +149,9 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 2;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 2; }
+            transform: translate(-50%, -50%); }
     .hero-image .hero-content .hero-title {
       font-size: 3.5rem;
       text-shadow: 0 0 25px -5px #000; }
@@ -202,7 +202,7 @@ body {
     z-index: 100; }
   .modal .message {
     -webkit-box-shadow: 0 0 25px -5px #000;
-    box-shadow: 0 0 25px -5px #000;
+            box-shadow: 0 0 25px -5px #000;
     border-radius: 5px;
     background: #f2f5f9;
     height: 20.5rem;
@@ -220,13 +220,13 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     z-index: 101; }
-    @media (max-width: 437px) {
+    @media (max-width: 450px) {
       .modal .message {
         width: 100%; } }
     .modal .message h2 {
@@ -287,34 +287,38 @@ footer {
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite; }
+          animation: spin 2s linear infinite; }
 
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   100% {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 /* Add animation to "page content" */
 .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
+          animation-name: animatebottom;
   -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s; }
+          animation-duration: 1s; }
 
 @-webkit-keyframes animatebottom {
   from {
     bottom: -100px;
     opacity: 0; }
   to {
-    bottom: 0px;
+    bottom: 0;
     opacity: 1; } }
 
 @keyframes animatebottom {

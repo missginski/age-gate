@@ -1,4 +1,18 @@
 /**************
+LOADER
+**************/
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+/**************
 NAV TOGGLE
 **************/
 const button = $('.toggle-nav');
@@ -61,16 +75,3 @@ let currdate = new Date();
 }
 
 submit.on('click', getAge);
-
-
-
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}

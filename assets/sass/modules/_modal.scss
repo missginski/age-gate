@@ -15,10 +15,8 @@
     opacity: 0.5;
     z-index: 100;
   }
-
   .message {
-  	-webkit-box-shadow: 0 0 25px -5px $black;
-  	        box-shadow: 0 0 25px -5px $black;
+  	box-shadow: 0 0 25px -5px $black;
   	border-radius: 5px;
     background: $lter-grey;
   	height: 20.5rem;
@@ -31,19 +29,12 @@
   	left: 0;
     bottom: 0;
   	right: 0;
-  	display: -webkit-box;
-  	display: -ms-flexbox;
   	display: flex;
-  	-webkit-box-orient: vertical;
-  	-webkit-box-direction: normal;
-  	    -ms-flex-direction: column;
-  	        flex-direction: column;
-  	-webkit-box-pack: justify;
-  	    -ms-flex-pack: justify;
-  	        justify-content: space-between;
+  	flex-direction: column;
+  	justify-content: space-between;
     z-index: 101;
 
-    @media (max-width: 437px) {
+    @include xs {
       width: 100%;
     }
 
@@ -84,7 +75,6 @@
       font-size: 1.5rem;
     	margin: .75rem 0;
       text-align: center;
-    	-webkit-transition: .3s;
     	transition: .3s;
 
       &:hover {
