@@ -1,11 +1,11 @@
 .product-grid {
   .grid-item {
-    padding: 2rem 3rem;
+    padding: 2rem 3rem 6rem;
     border: .5px solid $md-grey;
-    transition: .3s;
+    transition: .5s;
 
     &:hover {
-      // background-color: $lt-grey;
+      background-color: $lt-grey;
 
       .product-overlay {
         opacity: 1;
@@ -13,10 +13,16 @@
         transform: translateY(0);
       }
     }
-    .product-info > span {
-      display: block;
-      text-align: center;
+
+    .product-info {
+      padding-bottom: 1rem;
+
+      & > span {
+        display: block;
+        text-align: center;
+      }
     }
+
     .product-year {
       padding: .625rem 0;
       font-size: .875rem;
@@ -24,53 +30,55 @@
       color: $dker-md-grey;
       letter-spacing: 4px;
     }
+
     .product-title {
       padding: 0 0 .3125rem;
       color: $dark-grey;
       font-size: 1.625rem;
     }
+
     .product-price {
       font-size: 1.375rem;
       font-weight: 600;
       color: $green;
     }
+
     .product-overlay {
       background: rgba(255,255,255,0.5);
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      padding: 60px 5px;
-      transform: translateY(-60px);
+      padding: 30px 5px;
+      transform: translateY(30px);
       opacity: 0;
       z-index: -1;
       transition: all .48s ease;
       text-align: center;
 
-        li {
-          display: inline-block;
-        }
-        li:not(:last-child) {
-          margin-right: 1rem;
-        }
-        button {
-          border: 0;
-          border-radius: 0;
-          padding: 7px 12px;
-          background: #8894ff;
+      li {
+        display: inline-block;
+      }
 
-          i {
-            font-size: 24px;
-            color: #fff;
-            vertical-align: middle;
-          }
+      li:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      button {
+        border: none;
+        padding: 10px 12px;
+        background: $green;
+
+        &:hover {
+          background-color: $dk-green;
         }
 
-
-
-
-
-
+        i {
+          font-size: 28px;
+          color: $white;
+          vertical-align: middle;
+        }
+      }
     }
   }
 }
