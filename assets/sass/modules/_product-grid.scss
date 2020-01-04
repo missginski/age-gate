@@ -1,11 +1,11 @@
 .product-grid {
   .grid-item {
-    padding: 4rem 2rem;
+    padding: 2rem 3rem;
     border: .5px solid $md-grey;
     transition: .3s;
 
     &:hover {
-      background-color: $lt-grey;
+      // background-color: $lt-grey;
 
       .product-overlay {
         opacity: 1;
@@ -37,14 +37,40 @@
     .product-overlay {
       background: rgba(255,255,255,0.5);
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       width: 100%;
-      padding: 30px 5px;
-      transform: translateY(-30px);
+      padding: 60px 5px;
+      transform: translateY(-60px);
       opacity: 0;
       z-index: -1;
       transition: all .48s ease;
+      text-align: center;
+
+        li {
+          display: inline-block;
+        }
+        li:not(:last-child) {
+          margin-right: 1rem;
+        }
+        button {
+          border: 0;
+          border-radius: 0;
+          padding: 7px 12px;
+          background: #8894ff;
+
+          i {
+            font-size: 24px;
+            color: #fff;
+            vertical-align: middle;
+          }
+        }
+
+
+
+
+
+
     }
   }
 }
