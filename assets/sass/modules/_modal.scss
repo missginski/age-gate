@@ -7,15 +7,18 @@
   top: 0;
   z-index: 100;
 
-  .overlay {
-    background-color: $black;
+  &::after {
+    content: '';
+    background-color: $dark-grey;
+    opacity: .8;
     height: 100%;
   	width: 100%;
-  	position: relative;
-    opacity: 0.5;
+  	position: absolute;
+    top: 0;
+    left: 0;
     z-index: 100;
   }
-  
+
   .message {
   	box-shadow: 0 0 25px -5px $black;
   	border-radius: 5px;
@@ -45,14 +48,13 @@
     }
 
     .success-error {
-    	display: none;
-
       p {
         padding-top: .5rem;
         font-size: 1.125rem;
+        color: $dk-pink;
 
-        &.error {
-          color: $dk-pink;
+        &.text-dark {
+          color: $dark-grey;
         }
       }
     }

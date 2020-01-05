@@ -32,7 +32,11 @@ body {
     height: auto;
   }
 
-  .content.fixed {
+  .content {
     position: fixed;
+
+    &.unfix {
+      position: static;
+    }
   }
 }

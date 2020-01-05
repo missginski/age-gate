@@ -1,16 +1,17 @@
 /**************
 LOADER
 **************/
-var myVar;
+const body = $('body');
+const loader = $('.loader-wrapper');
 
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
+body.addClass('loader-site');
 
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
+function removeLoader() {
+  loader.fadeOut();
+  body.removeClass('loader-site');
+};
+
+setTimeout(removeLoader, 1500);
 
 /**************
 NAV TOGGLE
@@ -26,52 +27,69 @@ function toggleNav() {
 button.on('click', toggleNav);
 
 /**************
-MODAL
+AGE GATE MODAL
 **************/
 const modal = $('.modal');
 const submit = $('.formsubmit');
 const content = $('.content');
-const message = $('.success-error');
 
+// Checks local storage for previously verified age
 if(localStorage && localStorage.getItem('age')) {
-	$(content).fadeIn();
+  content.addClass('unfix').fadeIn();
 } else {
-	$(modal).fadeIn();
+  modal.fadeIn();
 };
 
+// Gets age value and compares it checks if it's less than 21
 function getAge() {
-let month = $('.month').val();
-let year = $('.year').val();
-let age = 21;
-let mydate = new Date();
-let currdate = new Date();
+  let result;
+  let month = $('.month').val();
+  let year = $('.year').val();
+  let age = 21;
+  let inputDate = new Date();
+  let currentDate = new Date();
 
-  mydate = mydate.setFullYear(year, month - 1);
-  currdate = currdate.setFullYear(currdate.getFullYear() - age);
+  inputDate = inputDate.setFullYear(year, month - 1);
+  currentDate = currentDate.setFullYear(currentDate.getFullYear() - age);
 
   if (month === 'notset' || year === 'notset') {
-    $(message).fadeIn();
-    return false;
-  } else if ((currdate - mydate) < 0) {
-    $(message)
-      .html('<p class="error">Sorry, you must be 21 to enter this site</p>')
-      .fadeIn();
-    return false;
+    result = 'dateNotSet';
+  } else if ((currentDate - inputDate) < 0) {
+    result = false;
   } else {
-    $(message)
-      .html("<p>Success!</p>")
-      .fadeIn();
-
-    // if (remember) {
-    // 	localStorage.setItem('age','verified');
-    // }
-
-    $(submit).on('click', function() {
-      $(modal).fadeOut();
-      $(content).toggleClass('fixed');
-    })
-    return true;
+    result = true;
   }
-}
+  handleResult(result);
+};
+
+// Gets the age result and shows message to user
+function handleResult(result) {
+  const message = $('.success-error p');
+  let messageText;
+
+  if (result === 'dateNotSet') {
+    messageText = 'Please Enter a Valid Date';
+  } else if (!result) {
+    messageText = 'Sorry, you must be 21 to enter this site';
+  } else {
+    message.addClass('text-dark');
+    messageText = 'Success!';
+    setTimeout(removeModal, 1500);
+  }
+  message.html(messageText).fadeIn();
+};
+
+// Removes modal and fades in content
+function removeModal() {
+  let remember = $('.remember').val;
+
+  modal.fadeOut();
+  content.addClass('unfix');
+
+  // Sets local storage if box is checked
+  if (remember) {
+  	localStorage.setItem('age','verified');
+  }
+};
 
 submit.on('click', getAge);
