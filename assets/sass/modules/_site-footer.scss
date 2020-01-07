@@ -1,6 +1,5 @@
 footer {
-  text-align: center;
-  padding: .75rem .5rem;
+
   background-color: $dark-grey;
   z-index: 10;
   position: relative;
@@ -8,11 +7,78 @@ footer {
   p {
     color: $white;
     font-size: .875rem;
-    font-weight: 400;
-    
+    text-align: center;
+    padding: .75rem .5rem;
+
     a {
       color: $white;
       text-decoration: none;
+    }
+  }
+
+  .newsletter {
+    padding: 80px 25px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .social-links-list {
+      display: flex;
+      // align-content: flex-start;
+      // justify-content: flex-start;
+      // padding-right: 20px;
+      // margin-right: 20px;
+      // border-right: 1px solid $lt-grey;
+
+      .social-item {
+        padding-right: 20px;
+
+        button {
+         background-color: $dark-grey;
+         border: none;
+         color: $white;
+         font-size: 28px;
+         height: 60px;
+         width: 60px;
+       }
+
+       &.fb button {
+         background-color: $facebook;
+
+         &:hover {
+           cursor: pointer;
+           background-color: $facebook-hover;
+         }
+       }
+
+       &.tw button {
+         background-color: $twitter;
+
+         &:hover {
+           cursor: pointer;
+           background-color: $twitter-hover;
+         }
+       }
+
+       &.ig button {
+         background-color: $instagram;
+
+         &:hover {
+           cursor: pointer;
+           background-color: $instagram-hover;
+         }
+       }
+
+      }
+
+
+    }
+
+    .subscribe {
+      display: flex;
+      // align-items: center;
+      // justify-content: space-evenly;
     }
   }
 }

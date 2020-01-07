@@ -11,7 +11,8 @@ function removeLoader() {
   body.removeClass('loader-site');
 };
 
-setTimeout(removeLoader, 1500);
+// setTimeout(removeLoader, 1500);
+setTimeout(removeLoader, 00);
 
 /**************
 NAV TOGGLE
@@ -40,7 +41,7 @@ if(localStorage && localStorage.getItem('age')) {
   modal.fadeIn();
 };
 
-// Gets age value and compares it checks if it's less than 21
+// Gets input value and compares it checks if it's less than 21
 function getAge() {
   let result;
   let month = $('.month').val();
@@ -93,3 +94,18 @@ function removeModal() {
 };
 
 submit.on('click', getAge);
+
+
+/**************
+API call
+**************/
+// function getData() {
+  $.ajax({
+    method: 'GET',
+    dataType: 'json',
+    url: 'https://api.punkapi.com/v2/beers/random',
+    success: function(data) {
+      console.log(data);
+    }
+  });
+// };
