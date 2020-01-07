@@ -87,15 +87,16 @@
 
   .show-more-products {
     display: block;
-    height: 60px;
-    line-height: 60px;
+    background-color: rgba(242,245,249,.6);
+    color: $dark-grey;
     text-align: center;
     font-size: 22px;
     font-weight: 600;
-    color: $dark-grey;
+    height: 60px;
+    line-height: 60px;
     border-top: 1px solid transparent;
     border-bottom: 1px solid $md-grey;
-    background-color: rgba(242,245,249,.4);
+    z-index: 10;
 
     &:hover {
       background-color: rgba(242,245,249,.8);

@@ -1,7 +1,6 @@
 footer {
-
   background-color: $dark-grey;
-  z-index: 10;
+  // z-index: 10;
   position: relative;
 
   p {
@@ -20,65 +19,90 @@ footer {
     padding: 80px 25px;
     background-color: $white;
     display: flex;
-    align-items: center;
     justify-content: space-evenly;
 
     .social-links-list {
       display: flex;
-      // align-content: flex-start;
-      // justify-content: flex-start;
-      // padding-right: 20px;
-      // margin-right: 20px;
-      // border-right: 1px solid $lt-grey;
+      flex: 0 0 auto;
+      margin-right: 2rem;
+      border-right: 1px solid $md-grey;
 
       .social-item {
-        padding-right: 20px;
+        padding-right: 1rem;
+
+        &:last-child {
+          margin-right: 1rem;
+        }
 
         button {
-         background-color: $dark-grey;
-         border: none;
-         color: $white;
-         font-size: 28px;
-         height: 60px;
-         width: 60px;
-       }
+          background-color: $dark-grey;
+          border: none;
+          color: $white;
+          font-size: 28px;
+          height: 60px;
+          width: 60px;
+        }
 
-       &.fb button {
-         background-color: $facebook;
+        &.fb button {
+          background-color: $facebook;
+          cursor: pointer;
+        }
 
-         &:hover {
-           cursor: pointer;
-           background-color: $facebook-hover;
-         }
-       }
+        &.tw button {
+          background-color: $twitter;
+          cursor: pointer;
+        }
 
-       &.tw button {
-         background-color: $twitter;
+        &.ig button {
+          background-color: $instagram;
+          cursor: pointer;
 
-         &:hover {
-           cursor: pointer;
-           background-color: $twitter-hover;
-         }
-       }
-
-       &.ig button {
-         background-color: $instagram;
-
-         &:hover {
-           cursor: pointer;
-           background-color: $instagram-hover;
-         }
-       }
-
+        }
       }
-
-
     }
 
     .subscribe {
       display: flex;
-      // align-items: center;
-      // justify-content: space-evenly;
+      align-items: center;
+
+      .subscribe-title {
+        font-size: 26px;
+      }
+
+      .subscribe-form {
+        padding-left: 2rem;
+        
+        input {
+          background-color: $form-bg;
+          color: $form-text;
+          font-family: 'Josefin Sans', sans-serif;
+          font-size: 20px;
+          // font-weight: 100;
+          line-height: 60px;
+          height: 60px;
+          width: 350px;
+          padding: 0 1rem;
+          border: 1px solid $md-grey;
+        }
+
+        button {
+          background-color: $green;
+          color: $white;
+          font-family: 'Josefin Sans', sans-serif;
+          font-size: 22px;
+          line-height: 60px;
+          height: 60px;
+          width: 180px;
+          border: none;
+          margin-left: 1rem;
+          transition: .3s ease;
+
+          &:hover {
+            cursor: pointer;
+            background-color: $dk-green;
+          }
+        }
+      }
     }
   }
 }
