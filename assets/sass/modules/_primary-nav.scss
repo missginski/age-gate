@@ -16,8 +16,15 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.625rem;
+
+    // &:hover {
+    //   color: $green;
+    // }
   }
 
+/*******************
+NAV TOGGLE
+*******************/
   .toggle-nav {
     display: block;
     width: 60px;
@@ -72,8 +79,11 @@
   }
 }
 
+/*******************
+MENU
+*******************/
 .menu {
-  background: $white;
+  background-color: $white;
   height: 450px;
   width: 355px;
   text-align: center;
