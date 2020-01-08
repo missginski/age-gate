@@ -491,7 +491,8 @@ body.loader-site {
   margin-top: 60px;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -355px;
+  opacity: 0;
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -499,7 +500,12 @@ body.loader-site {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+  .cart-panel.active {
+    right: 0;
+    opacity: 1; }
   .cart-panel .cart-value {
     line-height: 60px;
     height: 60px;

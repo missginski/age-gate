@@ -6,11 +6,18 @@
     margin-top: 60px;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -355px;
+    opacity: 0;
     z-index: 3;
     display: flex;
     flex-direction: column;
     // justify-content: flex-start;
+    transition: .3s ease;
+
+    &.active {
+        right: 0;
+        opacity: 1;
+    }
     
     .cart-value {
         line-height: 60px;
@@ -105,9 +112,5 @@
             }
         }
     }
-
-    
-
-    
 }
 

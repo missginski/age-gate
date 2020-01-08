@@ -28,6 +28,18 @@ function toggleNav() {
 button.on('click', toggleNav);
 
 /**************
+CART PANEL TOGGLE
+**************/
+const cartButton = $('.cart');
+const cartPanel = $('.cart-panel');
+
+function toggleCart() {
+  cartPanel.toggleClass('active');
+}
+
+cartButton.on('click', toggleCart);
+
+/**************
 AGE GATE MODAL
 **************/
 const modal = $('.modal');
