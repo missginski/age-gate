@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Fake Store</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Work+Sans&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/vendors/bootstrap-grid.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="loader-wrapper"><!-- loader -->
+	<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
+<main class="content"><!-- main content -->
+	<header>
+		<div class="container-fluid">
+			<div class="header-wrapper">
+				<div class="toggle-wrapper">
+					<a class="toggle-nav">
+						<div class="line"></div>
+					</a>
+				</div>
+				<div class="logo-wrap">
+					<a href="#" class="logo-text">Logo</a>
+				</div>
+				<a class="cart">
+					<i class="fas fa-shopping-bag"></i>
+				</a>
+			</div>
+			<nav>
+				<ul class="menu">
+					<li class="menu-item">
+						<a href="#" class="menu-link">About Us</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">Categories</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">Testimonials</a>
+					</li>
+					<li class="menu-item">
+						<a href="#" class="menu-link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div><!-- ends container -->
+	</header>
+	<div class="cart-panel"><!-- cart -->
+		<div class="cart-value">
+			<span>2</span>
+		</div>
+		<ul class="cart-item-list">
+			<li class="cart-item">
+				<div class="cart-img-wpr">
+					<img class="img-fluid" src="assets/images/wine_1.png" alt="wine bottle">
+				</div>
+				<div class="cart-info">
+					<a href="#" class="cart-info-title">Pinot Grigio</a>
+					<div class="cart-info-lower">
+						<span class="cart-price">$99</span>
+						<a href="#">Delete</a>
+					</div>
+				</div>
+			</li>
+			<li class="cart-item">
+				<div class="cart-img-wpr">
+					<img class="img-fluid" src="assets/images/wine_1.png" alt="wine bottle">
+				</div>
+				<div class="cart-info">
+					<a href="#" class="cart-info-title">Pinot Grigio</a>
+					<div class="cart-info-lower">
+						<span class="cart-price">$99</span>
+						<a href="#">Delete</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="cart-footer">
+			<span class="cart-total">Total: $308</span>
+			<a href="#" class="cart-checkout">Checkout</a>
+		</div>
+	</div><!-- ends cart -->
+	<!-- <section class="hero">
+		<div class="hero-image">
+			<div class="hero-content">
+				<h1 class="hero-title">Welcome to my Fake Store</h1>
+				<h2 class="hero-subtitle">Thanks for stopping by!</h2>
+			</div>
+		</div>
+	</section> -->
+
+	<section class="item-content"><!-- item content -->
+		<div class="container-fluid">
+			<div class="item-block">
+				<div class="item-img-wrapper">
+					<img class="img-fluid" src="assets/images/wine_2.png" alt="wine bottle">
+				</div>
+				<div class="item-info">
+					<h1 class="item-title">Pinot Grigio 2001</h1>
+					<span class="item-price">$399</span>
+					<form class="item-cart-form" action="">
+						<input class="item-cart-amt" value="1" type="text" id="amount">
+						<button class="item-cart-submit">Add to Cart</button>
+					</form>
+					<p class="item-desc">
+						Creating an authentic sound - is a question of orchestration. Only experience, love for music and an uncompromising position in matters of quality produces an authentic sound. This was always the philosophy of Vifa and the reason is that quality music and design appreciate the Copenhagen.
+					</p>
+					<div class="row">
+						<ul class="item-specs-list col-md-6">
+							<li class="spec"><strong>Dimensions:</strong> 26.8 cm / 9 cm / 36.2 cm</li>
+							<li class="spec"><strong>Weight:</strong> 4.65 kg (without packaging)</li>
+							<li class="spec"><strong>Material:</strong> Wool, Aluminum</li>
+							<li class="spec">Colors: Light Grey, Red, Black</li>
+						</ul>
+						<ul class="item-specs-list col-md-6">
+							<li class="spec"><strong>Signal transmission:</strong> Wireless</li>
+							<li class="spec"><strong>Connections:</strong> 3.5 mm Mini-Klinke</li>
+							<li class="spec"><strong>Battery capacity:</strong> 2600 mAh</li>
+							<li class="spec"><strong>Maximum power:</strong> 150 Watt</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><!-- ends container fluid -->
+	</section>
+
+	<footer><!-- footer -->
+		<div class="newsletter">
+			<ul class="social-links-list">
+				<li class="social-item fb">
+					<button><i class="fab fa-facebook-f"></i></button>
+				</li>
+				<li class="social-item tw">
+					<button><i class="fab fa-twitter"></i></button>
+				</li>
+				<li class="social-item ig">
+					<button><i class="fab fa-instagram"></i></button>
+				</li>
+			</ul>
+			<div class="subscribe">
+				<span class="subscribe-title">
+					Subscribe to get <strong>updates</strong>
+				</span>
+				<form class="subscribe-form" action="">
+					<input type="email" id="email-subscribe" placeholder="Enter your e-mail">
+					<button class="subscribe-btn green-btn">Subscribe</button>
+				</form>
+			</div>
+		</div>
+		<p>
+			Copyright ©
+			<script>document.write(new Date().getFullYear());</script>
+			| Made with
+			<i class="far fa-heart"></i>
+			by
+			<a href="https://missginski.github.io/" target="_blank">Kristyn</a>
+		</p>
+	</footer>
+</main><!-- ends content div -->
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

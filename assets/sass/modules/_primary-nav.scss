@@ -16,10 +16,17 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.625rem;
+  }
 
-    // &:hover {
-    //   color: $green;
-    // }
+  // .cart,
+  // .toggle-nav {
+  //   &:hover {
+  //     color: $green;
+  //   }
+  // }
+
+  .cart {
+    cursor: pointer;
   }
 
 /*******************

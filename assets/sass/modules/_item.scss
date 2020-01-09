@@ -1,0 +1,62 @@
+.item-block {
+    padding: 150px 0 20px;
+
+    .item-img-wrapper {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .item-info {
+        max-width: 720px;
+        margin: 80px auto 0;
+        text-align: center;
+        padding: 0 2rem;
+
+        .item-title {
+            display: inline-block;
+            font-size: 46px;
+            font-weight: 600;
+
+            &::after {
+                content: '•';
+                display: inline-block;
+                padding-left: 1.5rem;
+            }
+        }
+
+        .item-price {
+            color: $dker-md-grey;
+            display: inline-block;
+            font-size: 44px;
+            font-weight: 600;
+            font-family: 'Work Sans', sans-serif;
+            padding-left: 1.5rem;
+        }
+
+        .item-cart-form {
+            padding-top: 2.5rem;
+
+            input {
+                width: 5rem;
+                text-align: center;
+            }
+        }
+
+        .item-desc {
+            padding-top: 2.5rem;
+            font-size: 1.25rem;
+            font-family: 'Work Sans', sans-serif;
+            line-height: 1.4;
+        }
+
+        .item-specs-list {
+            padding: 2.5rem 1.5rem 0 1.5rem;
+            font-family: 'Work Sans', sans-serif;
+            font-size: .875rem;
+
+            .spec:not(:first-child)  {
+                padding-top: 1.25rem;
+            }
+        }
+    }
+}
