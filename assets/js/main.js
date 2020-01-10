@@ -23,6 +23,7 @@ const menu = $('.menu');
 function toggleNav() {
   button.toggleClass('close-nav');
   menu.toggleClass('active');
+  content.toggleClass('overlay');
 };
 
 button.on('click', toggleNav);
@@ -35,6 +36,7 @@ const cartPanel = $('.cart-panel');
 
 function toggleCart() {
   cartPanel.toggleClass('active');
+  content.toggleClass('overlay');
 }
 
 cartButton.on('click', toggleCart);
@@ -112,12 +114,12 @@ submit.on('click', getAge);
 API call
 **************/
 // function getData() {
-  $.ajax({
-    method: 'GET',
-    dataType: 'json',
-    url: 'https://api.punkapi.com/v2/beers/random',
-    success: function(data) {
-      console.log(data);
-    }
-  });
+  // $.ajax({
+  //   method: 'GET',
+  //   dataType: 'json',
+  //   url: 'https://api.punkapi.com/v2/beers/random',
+  //   success: function(data) {
+  //     console.log(data);
+  //   }
+  // });
 // };
