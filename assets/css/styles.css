@@ -506,6 +506,9 @@ body.loader-site {
           flex-direction: column;
   -webkit-transition: .3s ease;
   transition: .3s ease; }
+  @media (max-width: 450px) {
+    .cart-panel {
+      width: 100%; } }
   .cart-panel.active {
     right: 0;
     opacity: 1; }
@@ -614,7 +617,7 @@ body.loader-site {
         text-align: center; }
     .item-block .item-info .item-desc {
       padding-top: 2.5rem;
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-family: 'Work Sans', sans-serif;
       line-height: 1.4; }
     .item-block .item-info .item-specs-list {
